@@ -2,7 +2,7 @@
 
 // Array Dimensi
 
-// $nama = array("Lingard", "Rooney", "Mata", "Rashford", 100, 2.5);
+// $nama = array("Juan", "Mata", "Rashford", "Lingard", 100, 2.5);
 
 // var_dump($nama);
 // echo "<br>";
@@ -24,22 +24,22 @@
 // Array asosiatif
 
 // $nama = array(
-//     "Lingard" => "Surabaya",
-//     "Rooney" => "Malang Raya",
-//     "Mata" => "Jakarta",
+//     "Mata" => "Surabaya",
+//     "Lingard" => "Malang Raya",
+//     "Rashford" => "Jakarta",
 //     "Degea" => "Sidoarjo",
 // );
 
-$nama["Lingard"] = "Surabaya";
-$nama["Rooney"] = "Malang Raya";
-$nama["Mata"] = "Jakarta";
+$nama["Mata"] = "Surabaya";
+$nama["Lingard"] = "Malang Raya";
+$nama["Rashford"] = "Jakarta";
 $nama["Degea"] = "Sidoarjo";
-$nama["Rashford"] = "Semarang";
+$nama["Juan"] = "Semarang";
 
 var_dump($nama);
 echo "<br>";
 
-// echo $nama['Greenwood'];
+// echo $nama['Lingard'];
 
 foreach ($nama as $key => $value) {
 

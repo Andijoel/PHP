@@ -30,6 +30,6 @@
             break;
 
         default:
-            echo 'pilihan belum ada';
+            echo 'pilihan belom ada';
             break;
     }

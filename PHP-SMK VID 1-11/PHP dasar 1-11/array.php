@@ -2,7 +2,7 @@
 
 // Array Dimensi
 
-// $nama = array("Lingard", "Rooney", "Mata", "Degea", 100, 2.5);
+// $nama = array("Lingard", "Rooney", "Mata", "Rashford", 100, 2.5);
 
 // var_dump($nama);
 // echo "<br>";

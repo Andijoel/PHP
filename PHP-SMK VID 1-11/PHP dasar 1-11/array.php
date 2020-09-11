@@ -30,16 +30,16 @@
 //     "Rizkyo" => "Sidoarjo",
 // );
 
-$nama["Rizky"] = "Surabaya";
-$nama["Risky"] = "Malang Raya";
-$nama["Riskyo"] = "Jakarta";
-$nama["Rizkyo"] = "Sidoarjo";
-$nama["Rizkyi"] = "Semarang";
+$nama["Lingard"] = "Surabaya";
+$nama["Rooney"] = "Malang Raya";
+$nama["Mata"] = "Jakarta";
+$nama["Degea"] = "Sidoarjo";
+$nama["Rashford"] = "Semarang";
 
 var_dump($nama);
 echo "<br>";
 
-// echo $nama['Rizkyo'];
+// echo $nama['Greenwood'];
 
 foreach ($nama as $key => $value) {
 

@@ -6,7 +6,7 @@
 <?php
 
     if(isset($_POST['opsi'])){
-		$opsi = $_POST['opsi']
+		$opsi = $_POST['opsi'];
 		
 		$where = "WHERE idkategori= $opsi";
 		
@@ -71,7 +71,7 @@
 		      <td><?php echo $no++ ?></td>
 			  <td><?php echo $r['menu']?></td>
 			  <td><?php echo $r['harga']?></td>
-			  <td><img style="width:100px" src"../upload/" alt=""><?php echo $r['gambar']?></td>
+			  <td><img style="width:100px" src="../upload/<?php echo $r['gambar']?>" alt=""></td>
 			  <td><a href="?f=menu&m=delete&id=<?php echo $r['idmenu']?>"<?php echo $r['idmenu']?>">Delete</a></td>
 			  <td><a href="?f=menu&m=update&id=<?php echo $r['idmenu']?>"<?php echo $r['idmenu']?>">Update</a></td>
 		  </tr>

@@ -26,7 +26,7 @@
     if (isset($_POST['simpan'])){
 		$kategori = $_POST['kategori'];
 		
-		$sql = "UPDATE INTO tblkategori SET kategori='$kategori' WHEre idkategori=$id";
+		$sql = "UPDATE tblkategori SET kategori='$kategori' WHEre idkategori=$id";
 		
 		$db->runSQL($sql);
 		

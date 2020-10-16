@@ -6,6 +6,12 @@
 	
 	$sql= "SELECT * FROM tblkategori  ORDER BY kategori";
 	$row= $db->getALL($sql);
+
+    if (isset($_GET['log'])) {
+	session_destroy();
+	header("location:index.php");
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -22,14 +28,31 @@
 <body>
     <div class="container">
 	     <div class="row">
-		     <div class="col-md-3">
+		     <div class="col-md-3 mt-4">
 			      <h2><a href="index.php">Restoran Emyu</a></h2>
 			 </div>
 			 <div class="col-md-9">
-			      <div class="float-right mt-4 mr-4">logout</div>
-				  <div class="float-right mt-4 mr-4">Login</div>
-				  <div class="float-right mt-4 mr-4">Pelanggan</div>
-				  <div class="float-right mt-4 mr-4">Daftar</div>
+
+			 <?php 
+			 
+			       if (isset($_SESSION['pelanggan'])) {
+					   echo '
+					   <div class="float-right mt-4 mr-4"><a href="?log=logout">logout</a></div>
+					   <div class="float-right mt-4 mr-4">Pelanggan : <a href="?f=home&m=beli"> '.$_SESSION['pelanggan'].'</a></div>
+					   ';
+				   }else {
+					echo '
+					<div class="float-right mt-4 mr-4"><a href="?f=home&m=login">Login</a></div>
+				    <div class="float-right mt-4 mr-4"><a href="?f=home&m=daftar">Daftar</a></div>
+					';
+				   }
+			 
+			 
+			 
+			 
+			 ?>
+			      
+				  
 				  
 			 </div>
 
@@ -40,7 +63,7 @@
 				  <?php if(!empty($row)){ ?>
 				  <ul class="nav flex-column">
 				  <?php foreach($row as $r): ?>
-				      <li class="nav-item"><a class="nav-link" href"?f=home&m=produk&id=<?php echo $r['idkategori'] ?>"><?php echo $r['kategori'] ?></a></li>
+				      <li class="nav-item"><a class="nav-link" href="?f=home&m=produk&id=<?php echo $r['idkategori'] ?>"><?php echo $r['kategori'] ?></a></li>
 				  <?php endforeach ?>  
 				  </ul>
 				  <?php } ?>
